@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+html{
+	overflow-y: scroll;
+	overflow:-moz-scrollbars-vertical;
+}
+
+/*定制css*/
+body{
+	background-color: #CCC;
+	font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+	min-width: 1024px;
+}
+
+.container{
+	/*background: #FFF ;*/
+}
+
+/*导航栏*/
+#nav_header{
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+/*	opacity:0.6;
+	filter:alpha(opacity=60);*/
+	/*background: none;*/
+}
+
+#nav_header > ul{
+	margin:0 20px 0 30px;
+}
+
+#nav_header > ul > li{
+	margin-top: 8px;
+	margin-right: 10px;
+}
+
+#nav_header > ul > li > a{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 15px;
+    text-align: center;
+    width: auto;	
+	color:#fff;
+}
+
+
+#nav_header > ul > li > a:hover{
+	background: #00628C; 
+}
+
+
+/* logo
+.navbar-brand{
+    background: url("../images/nest_logo.png") no-repeat scroll 0 0;
+    height: 26px;
+    margin: 12px 0 0 20px;
+    padding: 0;
+    text-indent: -99999px;
+    width: 97px;
+}*/
+
+
+/*登入注册*/
+.modal-close{
+	background: #f4f4f4 !important;
+	color: #aaa;
+	opacity: 1;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 20px;
+	right: 22px;
+	border-radius: 100px;
+	z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body部分*/
+.nest_part{
+	width:100%;
+	height:1080px;
+}
+
+.nest_part00{
+	background:#000 url("../images/raise_bg.jpg") no-repeat scroll 0 0;
+	/*-webkit-background-size:cover;*/
+	background-size:cover;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height:100%;
+/*	opacity:0.4;
+	filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+/*	-webkit-filter: blur(2px);
+	filter: blur(10px);*/
+}
+
+.nest_raise_inner{
+	padding-top:60px;
+	padding-left: 225px;
+	/*height:100%;*/
+	font-size: 60px;
+	line-height: 100px;
+	color: red;
+}
+
+.nest_dot{
+	background: url("../images/raise_dot.png") repeat 0 0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index: 1;
+}
+
+
+
+.nest_part01{
+	background: rgba(126,206,244,1);
+}
+
+.nest_part02{
+	background: rgba(241,158,194,1);
+}
+
+.nest_part03{
+	background: rgba(253,209,0,1);
+}
+
+
+
+/*侧边栏*/
+#sideTool{
+	z-index: 10;
+	width:50px;
+	height:80%;
+	min-height:600px;
+	position:fixed;
+	_position:absolute;
+	padding:50px 0;
+	right:0;
+	top:10%;
+	background: #36CCDA;
+	text-align:center;
+	font-family:"Microsoft YaHei","微软雅黑", SimHei, helvetica, arial, verdana, tahoma, sans-serif;
+	font-size:14px;
+	color:#fff;
+	font-weight:normal;
+/*	opacity:0.5;
+	filter:alpha(opacity=50);*/
+}
+
+.tool_div{
+	width: 50px;
+	height: 60px;
+	position: relative;
+	_position:static;
+	cursor: pointer;
+}
+.tool_div:hover{
+	background: #DBCA67;
+}
+
+/*点击后的效果*/
+.tool_div_click{
+	background: #fff !important;
+	color: #36CCDA !important;
+}
+
+.tool_div > .tool_wrap{
+	height: 40px;
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0; 
+}
+
+/*toolbar 镶嵌面板*/
+.tool_group_panel{
+	display: none;
+	/*opacity: 1;*/
+	right: 50px;
+	top:0;
+	width: 330px;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	z-index: 10;
+	color:#555;
+    border-left: 1px solid #ccc;
+    box-shadow: -3px 0 15px #555;
+}
+
+/*.tool_group_panel_show{
+	display: block;
+	opacity: 1;
+	right: 50px;
+}*/
+
+
+
+
+
+
+
+
+
+/*弧形菜单*/
+.tool_nav_div{
+	position: relative;
+	width:50px;
+	height:40px;
+}
+
+#tool_navs{
+	position: absolute;
+	top:0;
+	left:5px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	cursor: pointer;
+}
+
+#tool_navs:after{
+	content:attr(data-close);
+	z-index:11;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+}
+
+#tool_navs.tool_menu_active:after{
+	content:attr(data-open);
+}
+
+#tool_navs > li,#tool_navs:after{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	background-color:#fdd100;
+	z-index:11;
+}
+
+
+#tool_navs > li{
+	-webkit-transition:all .2s;
+	-moz-transition:.2s;
+	transition: all 0.2s ease 0s;
+	background-color: #36CCDA;
+}
+
+#tool_navs a{
+	width:40px;
+	height:40px;
+	display:inline-block;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	text-decoration:none;
+	color:#fff;
+	font-size:14px;
+}   
+
+

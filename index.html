@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>米龙巢</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div id="container">
+		<header id="nav_header">
+			<ul class="nav navbar-nav list-inline nest_menu_ul">
+				<li><a href="">首页</a></li>
+				<li><a href="">在线项目</a></li>
+				<li><a href="">投资心声</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right nest_menu_ul">
+				<li><a href="" data-toggle="modal" data-target="#login_reg">登入</a></li>
+				<li><a href="" data-toggle="modal" data-target="#login_reg">注册</a></li>
+			</ul>	
+		</header>
+
+		<section class="nest_part nest_part00">
+			<div class="nest_dot">
+				<!-- 内容部分 -->
+				<div class="nest_raise_inner">
+					米龙谷创业孵化器<br />
+					——让创业更简单
+				</div>
+			</div>
+		</section>
+
+ 		<section class="nest_part nest_part01">
+
+
+
+<!-- 登入注册 -->
+<div class="modal fade" id="login_reg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      	<button type="button" class="modal-close close" data-dismiss="modal" aria-hidden="true">×</button>
+      	<!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+		<div class="modal-box">
+			<div class="color-header visible-md visible-lg">
+				<span class="color-block yellow first"></span>
+				<span class="color-block blue"></span>
+				<span class="color-block yellow"></span>
+				<span class="color-block blue"></span>
+				<span class="color-block yellow"></span>
+				<span class="color-block blue"></span>
+			</div>
+			<div class="sign row signin kr-signin">
+				<div class="col-md-6">
+					<div class="signup-strape">
+						<div class="kr-sign-title">
+						<h3>快速注册，加入氪加</h3>
+						</div>
+						<form role="form" class="kr-form-signin form-col clearfix" rel="form-signup" action="user/ajax_signupUser" method="post" data-action="signin" data-method="" data-id="" data-name="" data-go="1">
+							<div class="form-inline">
+								<div class="form-group">
+									<label class="sr-only" for="kr-inputfirstname">姓</label>
+									<input type="text" name="lastname" class="form-control on placeholder" rel="input-text" id="kr-inputname-first" placeholder="姓">
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="kr-inputname">名</label>
+									<input type="text" name="firstname" class="form-control on placeholder" rel="input-text" id="kr-inputname-second" placeholder="名">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="kr-nickname">昵称</label>
+								<input type="text" class="form-control on placeholder check-exist check-nickname" max-length="18" name="nickname" rel="input-text" placeholder="@昵称（建议使用真名）" popover="tooltip" data-trigger="focus" data-html="true" data-placement="right" data-title="昵称为您在氪加 的唯一身份标示，可包含中文、英文、数字或“_”" data-original-title="">
+							</div>
+							<div class="form-group kr-signin-input">
+								<span class="kr-forget-image"><i class="icon-email"></i></span>
+								<input type="text" class="form-control on placeholder check-exist check-email" rel="input-email" name="email" placeholder="邮箱">
+							</div>
+							<div class="form-group kr-signin-input">
+								<span class="kr-span-lock"><i class="icon-lock"></i></span>
+								<input type="password" class="form-control on placeholder" name="password" placeholder="密码" popover="tooltip" data-trigger="focus" data-html="true" data-placement="right" data-title="请输入6~20位数字、字母或符号" data-original-title="">
+							</div>
+							<div class="help-group">
+								<p><span class="help-block"></span></p>
+							</div>
+							<div class="action-group kr-btn-push">
+								<button type="submit" rel="bar-action-register" class="btn kr-btn btn-large">快速注册</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-6 kr-login">
+					<div class="signin-strape">
+						<div class="kr-login-title">
+																							<h3>登录</h3>
+								<span class="kr-title-detail">这里是互联网创业者的圈子</span>
+																					</div>
+					</div>
+					<form class="form-signin form-col kr-form-signin" rel="form-login" action="user/ajax_logon" method="post" data-action="signin" data-method="" data-id="" data-name="" data-go="1">
+						<fieldset>
+							<div class="form-group input-group kr-signin-input has-error">
+								<span class="kr-forget-image"><i class="icon-email"></i></span>
+							    <input type="text" class="form-control on placeholder" placeholder="邮箱" name="email" rel="input-email">
+							</div>
+							<div class="form-group input-group kr-signin-input">
+							    <span class="kr-span-lock"><i class="icon-lock"></i></span>
+							    <input type="password" class="form-control on placeholder" placeholder="密码" name="pwd">
+							</div>
+							<div class="form-group clearfix">
+							    <label class="checkbox inline kr-label-checkbox">
+		                            <div class="label_check"><input type="checkbox" rel="sign-cookie-check" name="set-cookie" style="display: none;"></div>
+		                            <a href="javascript:;;;" class="kr-remember">记住我</a>
+		                            <a href="password/forget" class="kr-forget-pwd">忘记密码?</a>
+		                        </label>
+							    <button type="submit" class="btn kr-btn kr-yellow pull-right">登录</button>
+							</div>
+				        </fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div><!-- /.modal-content -->
+</div>
+    	    
+</div>
+			0阀值创业
+
+
+		</section>
+		<section class="nest_part nest_part02">
+			创业指导
+		</section>
+		<section class="nest_part nest_part03">
+			动态项目
+		</section>
+<!--		<section class="nest_part">
+			人脉一聚
+		</section>
+		<section class="nest_part">
+			排名投资
+		</section> -->
+	<!-- 		<div class="nav navbar-inverse nav-static-top">
+				<nav class="navbar navbar-default" role="navigation">
+
+					<div class="navbar navbar-nav">
+						<div class="nav-collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="">index</a></li>
+								<li><a href="">dfsd</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>		 -->	
+
+	</div> 
+
+
+
+	
+<div id="sideTool">
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-user"></span><br />用户</div>
+		<div class="tool_group_panel">
+			用户界面
+		</div>
+	</div>
+
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-list-alt"></span><br />项目</div>
+		<div class="tool_group_panel">
+			项目界面
+		</div>
+	</div>	
+
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-heart"></span><br />关注</div>
+		<div class="tool_group_panel">
+			关注界面
+		</div>
+	</div>
+
+	<div class="tool_nav_div">	
+		<ul id="tool_navs" data-open="收起" data-close="菜单" class="list-unstyled">
+			<li><a href="javascript:;">首页</a></li>
+			<li><a href="javascript:;">项目</a></li>
+			<li><a href="javascript:;">社区</a></li>
+		</ul>
+	</div>
+
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-tower"></span><br />人脉</div>
+		<div class="tool_group_panel">
+			人脉界面
+		</div>
+	</div>
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-tasks"></span><br />评估</div>
+		<div class="tool_group_panel">
+			评估界面
+		</div>
+	</div>
+	<div class="tool_div">
+		<div class="tool_wrap"><span class="glyphicon glyphicon-tree-deciduous"></span><br />资源</div>
+		<div class="tool_group_panel">
+			资源界面
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/sideTool.js"></script>
+
+<script type="text/javascript">
+	//窗口的自适应（开始打开页面）
+	// alert($(window).width()+'----'+$(document).width());
+    var nest_part=$('.nest_part');
+    nest_part.height($(window).height());
+    nest_part.width($(document.body).width());
+
+    $(window).resize(function() {
+        nest_part.height($(window).height());
+        nest_part.width($(document.body).width());
+      });
+
+    //弧形菜单
+	(function(){
+		var pi=Math.PI/180,ul=$("#tool_navs"),li=$("#tool_navs li"),i=li.length,r=120,ang=180/(i+1);
+		ul.click(function(){
+			$(this).toggleClass('tool_menu_active');
+			if($(this).hasClass('tool_menu_active')){
+				for(var a=0;a<i;a++){
+
+						var x=Math.floor(r*Math.cos(ang*(a+1)*pi+pi*90));
+						var y=Math.floor(r*Math.sin(ang*(a+1)*pi+pi*90));
+
+					li.eq(a).css({
+						'transition-delay':""+(50*a)+"ms",
+						'-webkit-transition-delay':""+(50*a)+"ms",
+						'-o-transition-delay':""+(50*a)+"ms",
+
+						'transform':"translate("+x+"px,"+-y+"px",
+						'-webkit-transform':"translate("+x+"px,"+-y+"px",
+						'-o-transform':"translate("+x+"px,"+-y+"px",
+						'-ms-transform':"translate("+x+"px,"+-y+"px"
+					});
+				}
+			}else{
+					li.removeAttr('style');
+				}
+		});
+	})($);
+
+
+</script>
+</body>
+<!-- 			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			    <div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nest_shortcut">
+				        <span class="sr-only">变形菜单</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand" href="www.minigee.com">米龙谷</a>
+			    </div>
+				<div class="collapse navbar-collapse" id="nest_shortcut">
+					<ul class="nav navbar-nav nest_nav">
+						<li><a href="">首页</a></li>
+						<li><a href="">在线项目</a></li>
+						<li><a href="">投资心声</a></li>
+					</ul>
+					<ul id="nest_login_ul" class="nav navbar-nav navbar-right">
+						<li><a id='nest_login' href="">登入</a></li>
+						<li><a id='nest_login' href="">注册</a></li>
+					</ul>	
+				</div>
+			</nav> -->
+</html>
